@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- It consists of the iconic SVG, font, and CSS toolkit which one can use in the project. Using Cloudfare's font-awesome we can import ions from the https://fontawesome.com/icons awesome! Here, icons mean the logo type things for the various functions we perform. -->
+    <title>JavaScript Text Editor</title>
+</head>
+<body>
+    <!-- https://fontawesome.com/v6/search -->
+    <!-- From the above link we'll get all the icons. Search the icons and then use them. For eg- for using 'B' type bold and then copy the code and paste it under button tag. -->
+    <div class="container">
+
+        <!-- Creating the various buttons under the options div -->
+        <div class="options"> <!-- Under the 'options' class we'll include all the buttons -->
+
+            <button id="bold" class="option-button format">
+                <i class="fa-solid fa-bold"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="superscript" class="option-button script">
+                <i class="fa-solid fa-superscript"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="subscript" class="option-button script">
+                <i class="fa-solid fa-subscript"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="insertOrderedList" class="option-button">
+                <i class="fa-solid fa-list-ol"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="insertUnorderedList" class="option-button">
+                <i class="fa-solid fa-list"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="undo" class="option-button">
+                <i class="fa-solid fa-rotate-left"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="redo" class="option-button">
+                <i class="fa-solid fa-rotate-right"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="createLink" class="adv-option-button">
+                <i class="fa fa-link"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="unLink" class="option-button">
+                <i class="fa fa-unlink"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="justifyLeft" class="option-button align">
+                <i class="fa-solid fa-align-left"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="justifyCenter" class="option-button align">
+                <i class="fa-solid fa-align-center"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="justifyRight" class="option-button align">
+                <i class="fa-solid fa-align-right"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="justifyFull" class="option-button align">
+                <i class="fa-solid fa-align-justify"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="indent" class="option-button spacing">
+                <i class="fa-solid fa-indent"></i> <!-- This is the copied code. -->
+            </button>
+            <button id="outdent" class="option-button spacing">
+                <i class="fa-solid fa-outdent"></i> <!-- This is the copied code. -->
+            </button>
+
+
+            <select id="formatBlock" class="adv-option-button"> <!-- It creates a drop-down button. -->
+
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="H4">H4</option>
+                <option value="H5">H5</option>
+                <option value="H6">H6</option>
+
+            </select> 
+
+
+            <select id="fontName" class="adv-option-button"></select>
+            <select id="fontSize" class="adv-option-button"></select>
+
+
+            <div class="input-wrapper">
+                <input type="color" id="foreColor" class="adv-option-button">
+                <label for="foreColor">Font Color</label> <!-- for attribute on a label binds the label to an input element. We always connect 'id' and 'for' attribute in the <label> and <input> tag. -->
+            </div>
+            <div class="input-wrapper">
+                <input type="color" id="backColor" class="adv-option-button">
+                <label for="backColor">Highlight Color</label> <!-- for attribute on a label binds the label to an input element. We always connect 'id' and 'for' attribute in the <label> and <input> tag. -->
+            </div>
+
+        </div>
+
+        <!-- Creating input text box for entering the text. -->
+        <div id="text-input" contenteditable="true"></div> <!-- contenteditable attribute specifies whether the content of an element is editable or not. We specify it by defining true or false. -->
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html> 
